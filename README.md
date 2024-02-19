@@ -66,9 +66,9 @@ ffmpeg -version
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-`✅ Step 0.` You can use the [prebuild](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.0/video_compress.exe) version.
+`✅ Step 0.` You can use the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.0/video_compress.exe) and proceed to step 4.
 
-`✅ Step 1.` Clone this repo:
+`✅ Step 1.` Clone the repo:
 ```
 git clone https://github.com/a13xe/BatchVideoCompress
 ```
