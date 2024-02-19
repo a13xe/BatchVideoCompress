@@ -1,10 +1,14 @@
 :video_camera: BatchVideoCompress
 ==================================================================================================================================================================================================================
 
-This project provides a simple C++ console application for batch compressing video files using FFmpeg. Users can specify input and output directories, select the compression strength, and the program will compress all video files in the input directory, saving them to the output directory.
+
+This project provides a simple C++ console application for batch compressing video files using FFmpeg. 
+Users can specify input and output directories, select the compression strength, and the program will compress all video files in the input directory, saving them to the output directory.
+
 
 :toolbox: Requirements
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Before running this program, you must have FFmpeg installed on your system. 
 Follow the installation instructions below for your operating system.
@@ -57,26 +61,30 @@ ffmpeg -version
 
 </details>
 
+
 :joystick: Usage
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-`✅ Step 0.` If you are on Windows you can use the [prebuild]() version
+
+`✅ Step 0.` You can use the [prebuild](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.0/video_compress.exe) version.
 
 `✅ Step 1.` Clone this repo:
 ```
 git clone https://github.com/a13xe/BatchVideoCompress
 ```
    
-`✅ Step 2.` Compile the C++ code:
+`✅ Step 2.` Compile the code:
 ```
 cd BatchVideoCompress
 g++ video_compress.cpp -o video_compress
 ```
 
-`✅ Step 3.` Run the compiled program from the command line
+`✅ Step 3.` Run the program:
 ```
-./videoCompressor
+./video_compress
 ```
 
 `✅ Step 4.` Follow the on-screen prompts:
+
+![Screenshot_2](https://github.com/a13xe/BatchVideoCompress/assets/77492646/18570a39-45d1-439a-ab75-abfe22b9b820)
 
