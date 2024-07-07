@@ -65,7 +65,7 @@ ffmpeg -version
 
 
 
-`✅ Step 1.` Use the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.2/video_compress.exe) and proceed to step 3.
+`✅ Step 1.` Run the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.2/video_compress.exe) and proceed to step 3.
 
 `✅ Step 2.` Compile and run:
 ```
