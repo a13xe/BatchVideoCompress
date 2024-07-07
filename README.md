@@ -1,23 +1,17 @@
-:video_camera: BatchVideoCompress
-==================================================================================================================================================================================================================
 
-
-This project provides a simple C++ console application for batch compressing video files using FFmpeg. 
-Users can specify input and output directories, select the compression strength, and the program will compress all video files in the input directory, saving them to the output directory.
-
-
-:toolbox: Requirements
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+:gear: Requirements
+-------------------------------------------------------------------------------------------------
 
 Before running this program, you must have FFmpeg installed on your system. 
 Follow the installation instructions below for your operating system.
 
-<!-- 
+<!-- ============================================================================================
 WINDOWS FFMPEG INSTALLATION
-============================================================================================
--->
+============================================================================================ -->
+<table>
+<td>
 <details>
+  
   <summary> :large_blue_circle: Installing FFmpeg on Windows </summary>
   <br>
   
@@ -38,13 +32,15 @@ SystemPropertiesAdvanced
 ```
 ffmpeg -version
 ```
-   
-</details>
 
-<!-- 
+</details>
+</table>
+
+<!-- ============================================================================================
 LINUX FFMPEG INSTALLATION
-============================================================================================
--->
+============================================================================================ -->
+<table>
+<td>
 <details>
   <summary> :large_blue_circle: Installing FFmpeg on Linux </summary>
   <br>
@@ -60,31 +56,25 @@ ffmpeg -version
 ```
 
 </details>
+</table>
+
 
 
 :joystick: Usage
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 
-`✅ Step 0.` You can use the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.0/video_compress.exe) and proceed to step 4.
 
-`✅ Step 1.` Clone the repo:
+`✅ Step 1.` Use the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.0/video_compress.exe) and proceed to step 3.
+
+`✅ Step 2.` Compile and run:
 ```
 git clone https://github.com/a13xe/BatchVideoCompress
-```
-   
-`✅ Step 2.` Compile the code:
-```
 cd BatchVideoCompress
 g++ video_compress.cpp -o video_compress
-```
-
-`✅ Step 3.` Run the program:
-```
 ./video_compress
 ```
 
-`✅ Step 4.` Follow the on-screen prompts:
+`✅ Step 3.` Follow the on-screen prompts:
 
-![Screenshot_2](https://github.com/a13xe/BatchVideoCompress/assets/77492646/18570a39-45d1-439a-ab75-abfe22b9b820)
-
+![Screeenshotto](https://github.com/a13xe/BatchVideoCompress/assets/77492646/696338c5-8840-4bb0-a081-c9ea494c1e42)
