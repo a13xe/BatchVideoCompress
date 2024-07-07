@@ -7,6 +7,20 @@
 using namespace std;
 
 
+bool isVideoFile(const string &fileName) 
+{
+    const string videoExtensions[] = {".mp4", ".avi", ".mkv", ".mov", ".flv", ".wmv", ".webm"};
+    for (const string &ext : videoExtensions) 
+    {
+        if (fileName.size() >= ext.size() && fileName.compare(fileName.size() - ext.size(), ext.size(), ext) == 0) 
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 void compressVideo(const string &inputPath, const string &outputPath, const string &fileName, const string &compressionStrength) 
 {
     string command = "ffmpeg -i \"" + inputPath + "/" + fileName + "\" -vcodec h264 -crf " + compressionStrength + " \"" + outputPath + "/" + fileName + "\"";
@@ -32,10 +46,11 @@ int main()
         colorized_print("Your videos: \n", YELLOW, BLACK, 1);
         while ((ent = readdir(dir)) != NULL) 
         {
-            string filePath = inputFolder + "/" + ent->d_name;
-            if (stat(filePath.c_str(), &st) == 0 && S_ISREG(st.st_mode)) 
+            string fileName = ent->d_name;
+            string filePath = inputFolder + "/" + fileName;
+            if (stat(filePath.c_str(), &st) == 0 && S_ISREG(st.st_mode) && isVideoFile(fileName)) 
             {
-                cout << ent->d_name << " (" << st.st_size << " bytes)" << endl;
+                cout << fileName << " (" << st.st_size << " bytes)" << endl;
             }
         }
         closedir(dir);
@@ -53,7 +68,8 @@ int main()
         while ((ent = readdir(dir)) != NULL) 
         {
             string fileName = ent->d_name;
-            if (fileName != "." && fileName != "..") 
+            string filePath = inputFolder + "/" + fileName;
+            if (stat(filePath.c_str(), &st) == 0 && S_ISREG(st.st_mode) && isVideoFile(fileName)) 
             {
                 compressVideo(inputFolder, outputFolder, fileName, compressionStrength);
             }
