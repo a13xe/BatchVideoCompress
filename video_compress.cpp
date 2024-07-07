@@ -23,9 +23,9 @@ int main()
 
     system("cls");
     colorized_print("Enter input folder path: ", BLUE, BLACK, 1);
-    cin >> inputFolder;
+    getline(cin, inputFolder);
     colorized_print("Enter output folder path: ", BLUE, BLACK, 1);
-    cin >> outputFolder;
+    getline(cin, outputFolder);
 
     if ((dir = opendir(inputFolder.c_str())) != NULL) 
     {
@@ -40,20 +40,23 @@ int main()
         }
         closedir(dir);
     } else {
-        colorized_print("Could't open input directory.\n", RED, BLACK, 1);
+        colorized_print("Couldn't open input directory.\n", RED, BLACK, 1);
         system("pause");
         return 1;
     }
 
     colorized_print("Enter compression strength (0-51, where 0 is lossless and 51 is the worst quality): ", BLUE, BLACK, 1);
-    cin >> compressionStrength;
+    getline(cin, compressionStrength);
 
     if ((dir = opendir(inputFolder.c_str())) != NULL) 
     {
         while ((ent = readdir(dir)) != NULL) 
         {
             string fileName = ent->d_name;
-            compressVideo(inputFolder, outputFolder, fileName, compressionStrength);
+            if (fileName != "." && fileName != "..") 
+            {
+                compressVideo(inputFolder, outputFolder, fileName, compressionStrength);
+            }
         }
         closedir(dir);
     } else {
@@ -61,7 +64,7 @@ int main()
         system("pause");
         return 1;
     }
-    colorized_print("\nFinnished!\n\n", GREEN, BLACK, 1);
+    colorized_print("\nFinished!\n\n", GREEN, BLACK, 1);
     system("pause");
 
     return 0;
