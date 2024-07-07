@@ -65,7 +65,7 @@ ffmpeg -version
 
 
 
-`✅ Step 1.` Use the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.1/video_compress.exe) and proceed to step 3.
+`✅ Step 1.` Use the [prebuild version](https://github.com/a13xe/BatchVideoCompress/releases/download/v1.0.2/video_compress.exe) and proceed to step 3.
 
 `✅ Step 2.` Compile and run:
 ```
@@ -77,4 +77,4 @@ g++ video_compress.cpp -o video_compress
 
 `✅ Step 3.` Follow the on-screen prompts:
 
-![Screeenshotto](https://github.com/a13xe/BatchVideoCompress/assets/77492646/696338c5-8840-4bb0-a081-c9ea494c1e42)
+![Screeenshotto](https://github.com/a13xe/BatchVideoCompress/assets/77492646/925f6116-2582-43de-b068-79bdce93b775)
